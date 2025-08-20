@@ -1,0 +1,499 @@
+Language Pack
+Last-Modified-Using: http://www.microsip.org/translation
+RTL: 0
+
+; utf8
+
+[Call]
+Chamar
+[End Call]
+Encerrar chamada
+[Contacts]
+Contatos
+[Account]
+Conta
+[Settings]
+Configurações
+[Visit Website]
+Visitar Website
+[Exit]
+Sair
+[Browse...]
+Escolher...
+[Default]
+Padrão
+[Auto Answer]
+Atendimento automático
+[Disable Local Account]
+Desabilitar conta local
+[OK]
+OK
+[Save]
+Salvar
+[Cancel]
+Cancelar
+[SIP Server]
+Servidor SIP
+[SIP Proxy]
+Proxy SIP
+[Domain]
+Domínio
+[Password]
+Senha
+[Connecting...]
+Conectando...
+[Online]
+Online
+[Local]
+Local
+[Message]
+Mensagem
+[Edit]
+Editar
+[Delete]
+Remover
+[Add]
+Adicionar
+[Bad Gateway]
+Gateway inválido
+[Request Timeout]
+Tempo limite da requisição
+[Number]
+Número
+[Name]
+Nome
+[Contact]
+Contato
+[Incoming Call]
+Chamada Recebida
+[Answer]
+Atender
+[Decline]
+Recusar
+[Calling]
+Chamando
+[Connecting]
+Conectando
+[Connected]
+Conectado
+[Auto]
+Auto
+[Transport]
+Transporte
+[Incorrect Password]
+Senha Incorreta
+[Public Address]
+Endereço Público
+[Media Encryption]
+Criptografia
+[Disabled]
+Desabilitado
+[Optional]
+Opcional
+[Mandatory]
+Mandatório
+[STUN Server]
+Servidor STUN
+[Presence Subscription]
+Inscrição de Presença
+[Ringing]
+Chamando
+[Call Ended]
+Chamada encerrada
+[Declined]
+Recusada
+[No address found]
+Nenhum endereço encontrado
+[Request Terminated]
+Requisição terminada
+[Away]
+Ausente
+[Publish Presence]
+Publicar presença
+[Session Progress]
+Progresso da sessão
+[Camera]
+Câmera
+[Video Call]
+Chamada de vídeo
+[Answer with Video]
+Atender com Vídeo
+[View Log File]
+Ver Arquivo de Log
+[Microphone]
+Microfone
+[Speaker]
+Ouvir chamada em
+[Video Codec]
+CODEC de vídeo
+[Check for Updates]
+Verificar por atualizações
+[Daily]
+Diariamente
+[Weekly]
+Semanalmente
+[Monthly]
+Mensalmente
+[Quarterly]
+Trimestralmente
+[Never]
+Nunca
+[Update Available]
+Atualização disponível
+[Force Codec for Incoming]
+Forçar CODEC de Entrada
+[Invalid Number]
+Número inválido
+[Offline]
+Offline
+[Single Call Mode]
+Modo Chamada Única
+[Local Video]
+Vídeo local
+[Call Transfer]
+Transferir chamada
+[final]
+Finalizar
+[Call transfered successfully, disconnecting call]
+Chamada transferida com sucesso, desconectando a ligação
+[Hold]
+Espera
+[Transfer]
+Transferir
+[Sound Events]
+Tons do teclado
+[Bitrate]
+Taxa de bits
+[Login]
+Login
+[Enable Log File]
+Habilitar arquivo de log
+[Duration]
+Duração
+[Info]
+Informação
+[display password]
+exibir senha
+[From]
+De
+[To]
+Para
+[Ring Device]
+Ouvir toque em
+[Service Unavailable]
+Serviço indisponível
+[Unable to connect to remote server.]
+Incapaz de conectar ao servidor remoto.
+[Busy Here]
+Ocupado
+[Trying]
+Tentando
+[Method Not Allowed]
+Método Não Permitido
+[Not Found]
+Não Encontrado
+[Always on Top]
+Sempre no topo
+[Connect]
+Conectar
+[Last Call]
+Última Chamada
+[Close All]
+Fechar tudo
+[Copy]
+Copiar
+[Select All]
+Selecionar todos
+[Display Name]
+Nome de Exibição
+[Remember Details]
+Lembrar Detalhes
+[No]
+Não
+[All Calls]
+Todas as chamadas
+[SIP Header]
+Cabeçalho SIP
+[Different User]
+Usuário diferente
+[Different Domain]
+Domínio diferente
+[Different User or Domain]
+Usuário ou domínio diferente
+[Different Remote Domain]
+Domínio remoto diferente
+[Deny Incoming]
+Bloquear chamada entrante
+[Allow IP Rewrite]
+Permitir reescrever IP
+[Directory of Users]
+Diretório de usuários
+[Call on Remote Hold]
+Colocar na espera remota
+[Call on Local Hold]
+Chamada em espera local
+[Call on Hold]
+Chamada em espera
+[Call is Active]
+Chamada está ativa
+[Menu]
+Menu
+[Edit Account]
+Editar Conta
+[Add Account...]
+Adicionar Conta...
+[Remove Account]
+Remover conta
+[Make Active]
+Tornar Ativo
+[Are you sure you want to remove?]
+Você realmente deseja remover?
+[Call Pickup]
+Capturar chamada
+[Speaker Level]
+Volume de recepção
+[Microphone Level]
+Volume do Microfone
+[Mute Speaker]
+Silenciar recepção
+[Mute Microphone]
+Silenciar transmissão
+[Please fill out at least the required fields marked with *.]
+Preencha, pelo menos, os campos obrigatórios marcados com *.
+[Ask your SIP provider how to configure the account correctly.]
+Verifique com seu provedor SIP como configurar corretamente sua conta.
+[Time]
+Horário
+[Phone]
+Telefone
+[Ringtone]
+Toque de Chamada
+[Username]
+Usuário
+[Do you want to update now?]
+Deseja atualizar agora?
+[Available Codecs]
+CODECs disponíveis
+[Enabled Codecs]
+CODECs habilitados
+[Logs]
+Registros
+[Random Popup Position]
+Popup - Posição Aleatória
+[Attended Transfer]
+Transferência Assistida
+[Enable Local Account]
+Habilitar conta local
+[Send Crash Report]
+Enviar relatório de erro
+[Account Name]
+Nome da Conta
+[Invite to Conference]
+Convidar para conferência
+[Merge]
+Unir
+[Separate]
+Separado
+[Disconnect]
+Desconectar
+[DTMF Method]
+Método DTMF
+[Voicemail Number]
+N° do Correio de Voz
+[Disable Session Timers]
+Desabilitar timers de sessão
+[Microphone Amplification]
+Amplificação do microfone
+[Software Level Adjustment]
+Ajuste de volume por software
+[Shortcuts]
+Atalhos
+[Enable]
+Habilitar
+[Label]
+Etiqueta
+[Type]
+Tipo
+[Bottom Position]
+Posição inferior
+[You need to restart application for the changes to take effect.]
+Você precisa reiniciar a aplicação para aplicar as mudanças.
+[Handle Media Buttons]
+Usar teclas multimídia
+[Bring to Front on Incoming Call]
+Aparecer no topo ao receber chamada
+[Help]
+Ajuda
+[Video Bitrate]
+Amostragem do vídeo
+[Control Button]
+Botão de controle
+[Do Not Disturb]
+Não Perturbe
+[Source Port]
+Porta de Origem
+[RTP Ports]
+Portas RTP
+[Import]
+Importar
+[Blind Transfer]
+Transferência Cega
+[Redial]
+Rediscar
+[Backspace]
+Backspace
+[Clear]
+Limpar
+[Use Space key to enable selected codec]
+Use a barra de espaço para habilitar o CODEC selecionado
+[Use Delele key to disable selected codec]
+Use a tecla Delete para desabilitar o CODEC selecionado
+[Conference]
+Conferência
+[Dialing Prefix]
+Prefixo de Discagem
+[Register Refresh]
+Atualizar Registro
+[Keep-Alive]
+Manter ativo
+[Ringtone Volume]
+Volume do toque
+[Call Recording]
+Gravação de chamada
+[Nameserver]
+Servidor DNS
+[Default List Action]
+Lista de ação padrão
+[Edit Local Account]
+Editar Conta Local
+[Export]
+Exportar
+[Call Waiting]
+Chamada em Espera
+[Ready]
+Pronto
+[Not online]
+Não está online
+[On the phone]
+Ao telefone
+[First Name]
+Primeiro Nome
+[Last Name]
+Último Nome
+[Phone Number]
+Número de Telefone
+[Mobile Number]
+Número de Celular
+[E-mail Address]
+Endereço de e-mail
+[Address]
+Endereço
+[City]
+Cidade
+[State]
+Estado
+[Postal Code]
+CEP
+[Comment]
+Comentário
+[close window to ignore call]
+feche a janela para ignorar a chamada
+[Headset Support]
+Suporte para Fone de Ouvido
+[sec]
+seg
+[Call Forwarding]
+Encaminhamento de Chamadas
+[Are you sure you want to delete?]
+Tem certeza de que deseja excluir?
+[Delete contact]
+Excluir contato
+[Account or credentials not found.]
+Conta ou credenciais não encontradas.
+[Please fill out all required fields.]
+Por favor, preencha todos os campos obrigatórios.
+[Dial Plan]
+Plano de discagem
+[Disable Video]
+Desativar video
+[Disable Messaging]
+Desativar mensagens
+[Register]
+Registro
+[Unregister]
+Cancelar registro
+[Options]
+Opções
+[Delay]
+Demora
+[Caller Number]
+Número do chamador
+[Unable to find default audio device]
+Nenhum dispositivo de áudio encontrado
+[Network is unreachable]
+Rede indisponível ou configuração incorreta
+[Allow access to the microphone in your antivirus settings.]
+Permita o acesso ao microfone nas configurações do antivírus.
+[Fix microphone permission in the Windows settings (Windows Settings => Privacy => Microphone).]
+Corrija a permissão do microfone nas configurações do Windows (Configurações do Windows =&gt; Privacidade =&gt; Microfone).
+[Speakers and microphone both are required. To make calls you must have input and output sound device in your system.]
+Para utilização você deve possuir um dispositivo de áudio configurado em seu computador.
+[Canceled]
+Cancelada
+[Softphone is not initialized. Check your settings.]
+O softphone não foi inicializado. Verifique suas configurações.
+[Unable to initialize network sockets.]
+Não foi possível inicializar os soquetes de rede.
+[Starred]
+Favorito
+[Run at System Startup]
+Executar na inicialização do sistema
+[Run Batch]
+Executar lote
+[Call URL]
+URL de chamada
+[Call All]
+Chamar todos
+[Custom]
+Personalizado
+[Add Contact]
+Adicionar contato
+[Incorrect dialing or non-existent number]
+Discagem incorreta ou número inexistente
+[End]
+Terminar chamada
+[Address Incomplete]
+Endereço incompleto
+[Not acceptable here]
+Ligação não aceita. Verifique os CODECs utilizados.
+[Idle]
+Parado
+[Toggle]
+Alterar
+[Connection refused]
+Ligação recusada
+[Connection timed out]
+Sem conexão - Tempo Esgotado
+[Cannot get IP address of the called host]
+Não é possível obter o endereço IP do host chamado
+[Answered Elsewhere]
+Respondido em outro lugar
+[Missed Call]
+Chamada Perdida
+[Do you want to delete user data and program settings? This action cannot be undone.]
+Você deseja excluir dados do usuário e configurações do programa? Essa ação não pode ser desfeita.
+[Unavailable]
+Indisponível
+[Call Limit]
+Limite de chamadas
+[Hide Caller ID]
+Ocultar identificador de chamadas
+[Feature Codes]
+Códigos de recursos
+[Connection Failed]
+Falha na conexão
+[The server returned an error code:]
+O servidor retornou um código de erro:
+[The received data cannot be recognized]
+Os dados recebidos não podem ser reconhecidos
+[]
