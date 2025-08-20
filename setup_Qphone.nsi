@@ -25,7 +25,8 @@ RequestExecutionLevel admin
 Var /GLOBAL VAR_RAMAL
 Var /GLOBAL VAR_SENHA
 Var /GLOBAL VAR_DOMINIO
-Var /GLOBAL VAR_AUTOANSWER 
+Var /GLOBAL VAR_AUTOANSWER
+Var /GLOBAL VAR_USERDIR
 
 ; --- 4. Configuração da Interface (Páginas) ---
 !insertmacro MUI_PAGE_WELCOME
@@ -61,7 +62,8 @@ Function PageConfigLeave
     ReadINIStr $VAR_RAMAL "$PLUGINSDIR\config.ini" "Field 3" "State"
     ReadINIStr $VAR_SENHA "$PLUGINSDIR\config.ini" "Field 5" "State"
     ReadINIStr $VAR_DOMINIO "$PLUGINSDIR\config.ini" "Field 7" "State"
-    ReadINIStr $VAR_AUTOANSWER "$PLUGINSDIR\config.ini" "Field 8" "State"
+    ReadINIStr $VAR_USERDIR "$PLUGINSDIR\config.ini" "Field 9" "State"
+    ReadINIStr $VAR_AUTOANSWER "$PLUGINSDIR\config.ini" "Field 10" "State"
 
 
     ; Validação: Verifica se os campos não estão vazios
@@ -86,49 +88,38 @@ FunctionEnd
 ; ##################################################################
 Section "Qphone Core" SEC_CORE
 
-    !define DOWNLOAD_URL_ZIP "https://qosit.cloud/downloads/Qphone/Qphone.zip"
-    !define DOWNLOAD_URL_INI "https://qosit.cloud/downloads/Qphone/microsip_template.ini"
-
     SetOutPath "$INSTDIR"
 
-    ; --- Passo 1: Download ---
-    InetC::get /POPUP "Baixando Qphone..." /CAPTION "Progresso do Download" "${DOWNLOAD_URL_ZIP}" "$INSTDIR\Qphone.zip"
-    Pop $0
-    ${If} $0 != "OK"
-        MessageBox MB_OK|MB_ICONSTOP "O download falhou: $0$\n\nA instalação não pode continuar."
+    ; --- Passo 1: Copiar a pasta Qphone ---
+    ; $EXEDIR é o diretório onde o instalador.exe está
+    DetailPrint "Copiando arquivos do Qphone..."
+    ${If} ${FileExists} "$EXEDIR\Qphone\*.*"
+        CopyFiles /SILENT "$EXEDIR\Qphone\*.*" "$INSTDIR"
+    ${Else}
+        MessageBox MB_OK|MB_ICONSTOP "A pasta 'Qphone' não foi encontrada ao lado do instalador. A instalação não pode continuar."
         Quit
     ${EndIf}
 
-    ; --- Passo 2: Extração ---
-    DetailPrint "Extraindo arquivos..."
-    nsisunz::UnzipToLog "$INSTDIR\Qphone.zip" "$INSTDIR"
-    Pop $0
-    ${If} $0 != "success"
-        MessageBox MB_OK|MB_ICONSTOP "Falha ao extrair os arquivos: $0"
-        Quit
-    ${EndIf}
-    ; Delete "$INSTDIR\Qphone.zip"
+    ; --- Passo 2: Copiar o modelo de configuração global ---
+    ; Empacota o template de 'assets/' e o extrai para o diretório de instalação
+    DetailPrint "Aplicando configurações globais..."
+    File /oname=$INSTDIR\microsip.ini "assets\microsip_template.ini"
 
-    ; --- Passo 3: Baixar INI ---
-    DetailPrint "Baixando modelo de configuração..."
-    InetC::get "${DOWNLOAD_URL_INI}" "$INSTDIR\microsip.ini"
-    Pop $0
-    ${If} $0 != "OK"
-        MessageBox MB_OK|MB_ICONSTOP "O download do arquivo de configuração falhou: $0"
-        Quit
-    ${EndIf}
-
-    ; --- Passo 4: Adicionar os dados da conta ao arquivo .ini ---
+    ; --- Passo 3: Adicionar os dados da conta ao arquivo .ini ---
     DetailPrint "Configurando a conta de usuário..."
-    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "accountName"    "$VAR_RAMAL"
-    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "sipServer"      "$VAR_DOMINIO"
-    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "userName"       "$VAR_RAMAL"
-    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "domain"         "$VAR_DOMINIO"
-    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "login"          "$VAR_RAMAL"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "label"          "$VAR_RAMAL"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "username"       "$VAR_RAMAL"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "authID"         "$VAR_RAMAL"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "displayName"    "$VAR_RAMAL"
     WriteINIStr "$INSTDIR\microsip.ini" "Account1" "password"       "$VAR_SENHA"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "Server"         "$VAR_DOMINIO"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "domain"         "$VAR_DOMINIO"
+    WriteINIStr "$INSTDIR\microsip.ini" "Account1" "userName"       "$VAR_RAMAL"
     WriteINIStr "$INSTDIR\microsip.ini" "Account1" "enabled"        "1"
     WriteINIStr "$INSTDIR\microsip.ini" "Settings" "autoAnswer"     "$VAR_AUTOANSWER"
     WriteINIStr "$INSTDIR\microsip.ini" "Settings" "AA"             "$VAR_AUTOANSWER"
+    WriteINIStr "$INSTDIR\microsip.ini" "Settings" "usersDirectory" "$VAR_USERDIR"
+    WriteINIStr "$INSTDIR\microsip.ini" "Settings" "accountId"      "1"
 
     ; --- Passo 5: Criar o Desinstalador ---
     WriteUninstaller "$INSTDIR\Uninstall.exe"
@@ -163,4 +154,4 @@ SectionEnd
 ; #  Finalização: Assinatura Digital (Versão para Linux)           #
 ; ##################################################################
 
-!finalize 'osslsigncode sign -pkcs12 "Qphone_installer_cert.pfx" -pass "40637066" -ts "http://timestamp.digicert.com" -in "$%TEMP%\installer.exe" -out "$%TEMP%\installer-signed.exe" && mv "$%TEMP%\installer-signed.exe" "$%TEMP%\installer.exe"'
+!finalize 'osslsigncode sign -pkcs12 "cert.pfx" -pass "40637066" -ts "http://timestamp.digicert.com" -in "$%TEMP%\installer.exe" -out "$%TEMP%\installer-signed.exe" && mv "$%TEMP%\installer-signed.exe" "$%TEMP%\installer.exe"'
