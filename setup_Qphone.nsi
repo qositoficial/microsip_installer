@@ -9,7 +9,7 @@
 !include "FileFunc.nsh"
 
 ; --- 1. Propriedades e Branding ---
-Name "Qphone Softphone"
+Name "Qphone"
 OutFile "setup_Qphone.exe"
 InstallDir "$PROGRAMFILES\Qphone"
 RequestExecutionLevel admin
@@ -126,8 +126,8 @@ Section "Qphone Core" SEC_CORE
 
     ; Cria atalhos
     CreateDirectory "$SMPROGRAMS\Qphone"
-    CreateShortCut "$SMPROGRAMS\Qphone\Qphone Softphone.lnk" "$INSTDIR\microsip.exe"
-    CreateShortCut "$DESKTOP\Qphone Softphone.lnk" "$INSTDIR\microsip.exe"
+    CreateShortCut "$SMPROGRAMS\Qphone\Qphone.lnk" "$INSTDIR\microsip.exe"
+    CreateShortCut "$DESKTOP\Qphone.lnk" "$INSTDIR\microsip.exe"
 
 SectionEnd
 
@@ -143,9 +143,9 @@ Section "Uninstall"
     RMDir /r "$INSTDIR"
 
     ; Deleta os atalhos
-    Delete "$SMPROGRAMS\Qphone\Qphone Softphone.lnk"
+    Delete "$SMPROGRAMS\Qphone\Qphone.lnk"
     RMDir "$SMPROGRAMS\Qphone"
-    Delete "$DESKTOP\Qphone Softphone.lnk"
+    Delete "$DESKTOP\Qphone.lnk"
 
 SectionEnd
 
