@@ -1,0 +1,6 @@
+*.png
+*.xcf
+*.pfx
+*.sh
+config_page.ini
+*.nsi
